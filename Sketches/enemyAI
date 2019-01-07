@@ -8,7 +8,7 @@ public class SCRIPTNAME : MonoBehaviour
 
     public float speed;
 
-    public float distanceBetweenplayerandenemy;
+    public float distanceBetweenplayerandenemyForTrigger;
     
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class SCRIPTNAME : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, target.position) > distanceBetweenplayerandenemy)
+        if (Vector2.Distance(transform.position, target.position) > distanceBetweenplayerandenemyForTrigger)
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
