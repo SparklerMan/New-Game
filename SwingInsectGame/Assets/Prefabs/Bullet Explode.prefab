@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4665442901703854}
   - component: {fileID: 198301596387548566}
+  - component: {fileID: 114197135633419276}
   - component: {fileID: 199960077751242120}
   m_Layer: 0
   m_Name: Bullet Explode
@@ -41,6 +42,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &114197135633419276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1399964036637194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b4ed799643895468967a7a1c9317f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 3
 --- !u!198 &198301596387548566
 ParticleSystem:
   m_ObjectHideFlags: 1
