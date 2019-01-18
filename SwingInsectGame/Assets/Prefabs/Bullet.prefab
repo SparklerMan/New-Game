@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e12577931b198f41b84f05681c792ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
+  Speed: 14
   ExplodeEffect: {fileID: 1399964036637194, guid: ea539c3b8218cab4ab37c5d80451f2ef,
     type: 2}
   LifeTime: 3
