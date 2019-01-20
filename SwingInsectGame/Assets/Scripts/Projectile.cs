@@ -13,13 +13,11 @@ public class Projectile : MonoBehaviour
 
     //Sound and Camera shake
 
-    public AudioClip SoundClip;
-    public AudioSource SoundSource;
+
 
 	void Start()
 	{
 		Invoke ("DestroyProjectile", LifeTime);
-        SoundSource.clip = SoundClip;
 	}
 
 	void Update () 
@@ -41,9 +39,13 @@ public class Projectile : MonoBehaviour
 
 	public void DestroyProjectile()
 	{
-        SoundSource.Play();
-        Instantiate (ExplodeEffect,transform.position,Quaternion.identity);
         Destroy(gameObject);
+        Effect();
+    }
+
+    public void Effect()
+    {
+        Instantiate(ExplodeEffect, transform.position, Quaternion.identity);
     }
 
 }
