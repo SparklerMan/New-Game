@@ -10,9 +10,16 @@ public class Projectile : MonoBehaviour
 	public LayerMask Whatissolid;
 	public int damage;
 	public float Distance;
+
+    //Sound and Camera shake
+
+    public AudioClip SoundClip;
+    public AudioSource SoundSource;
+
 	void Start()
 	{
 		Invoke ("DestroyProjectile", LifeTime);
+        SoundSource.clip = SoundClip;
 	}
 
 	void Update () 
@@ -34,8 +41,9 @@ public class Projectile : MonoBehaviour
 
 	public void DestroyProjectile()
 	{
-		Instantiate (ExplodeEffect,transform.position,Quaternion.identity);
-		Destroy (gameObject);
-	}
+        SoundSource.Play();
+        Instantiate (ExplodeEffect,transform.position,Quaternion.identity);
+        Destroy(gameObject);
+    }
 
 }
