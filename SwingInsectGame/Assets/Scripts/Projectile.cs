@@ -11,13 +11,13 @@ public class Projectile : MonoBehaviour
 	public int damage;
 	public float Distance;
 
-    //Sound and Camera shake
-
-
+    public CamShake Shake;
 
 	void Start()
 	{
 		Invoke ("DestroyProjectile", LifeTime);
+
+        Shake = GameObject.FindGameObjectWithTag("Scrn").GetComponent<CamShake>();
 	}
 
 	void Update () 
@@ -46,6 +46,8 @@ public class Projectile : MonoBehaviour
     public void Effect()
     {
         Instantiate(ExplodeEffect, transform.position, Quaternion.identity);
+
+        Shake.ShakeCam();
     }
 
 }
