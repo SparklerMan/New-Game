@@ -50,7 +50,7 @@ public class grapplingHook : MonoBehaviour {
 
         if (Input.GetMouseButton(1))
         {
-            if (Input.GetKey(KeyCode.LeftShift)){
+            if (Input.GetKey(KeyCode.UpArrow)){
                 joint.distance -= approachSpeed * Time.deltaTime;
                 joint.connectedAnchor = connectedAnchor;
             }

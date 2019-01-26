@@ -172,7 +172,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   damage: 1
   Distance: 0.25
-  Shake: {fileID: 95787762927099972, guid: b19c9e433c85e3c4892f2e32fa6c5fbf, type: 2}
+  Shake: {fileID: 0}
 --- !u!212 &212997990175551168
 SpriteRenderer:
   m_ObjectHideFlags: 1
